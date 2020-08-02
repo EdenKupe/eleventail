@@ -4,8 +4,8 @@ layout: default
 ---
 <div class="pr-32 md:pr-56 text-left mb-4 mt-4">
  {%- for post in collections.mainPages -%}
-<div class="entryContainer">
-  <div class="authorContainer text-tangerine">{{ post.data.author }}</div>
+<div class="entryContainer btn-log">
+  <div onclick="contentCollapse(event)" class="authorContainer text-tangerine btn-log">{{ post.data.author }}</div>
   <div class="contentContainer text-quicksilver">{{ post.data.title }}</div>
 </div>
 {%- endfor -%}

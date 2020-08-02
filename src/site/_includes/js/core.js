@@ -8,3 +8,7 @@ function btnHandler(selector, callback) {
   }, false);
 }
 
+function contentCollapse (event) {
+  var content = event.target.nextElementSibling;
+  content.classList.toggle('hidden');
+}
