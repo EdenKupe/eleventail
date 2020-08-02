@@ -2,8 +2,11 @@
 title: ElevenTail
 layout: default
 ---
-<div class="pr-32 md:pr-56 text-right mb--4">
+<div class="pr-32 md:pr-56 text-left mb-4 mt-4">
  {%- for post in collections.mainPages -%}
-  <div>{{ post.data.author }}</div>
+<div class="entryContainer">
+  <div class="authorContainer text-tangerine">{{ post.data.author }}</div>
+  <div class="contentContainer text-quicksilver">{{ post.data.title }}</div>
+</div>
 {%- endfor -%}
 </div>
