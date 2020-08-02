@@ -41,6 +41,20 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/css");
 
+  // creating a custom collection of all posts, sorted alphabetically
+
+  eleventyConfig.addCollection("mainPages", function(collection) {
+    return collection.getFilteredByGlob("src/site/pages/*.md").sort(function(a, b) {
+      if (a.data.author && b.data.author) {  
+        let nameA = a.data.author.toLowerCase();
+        let nameB = b.data.author.toLowerCase();
+        if (nameA < nameB) return -1;
+        else if (nameA > nameB) return 1;
+        else return 0;
+      }
+    });
+});
+
   return  {
     dir: {
       input: "src/site",
