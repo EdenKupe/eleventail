@@ -28,6 +28,19 @@ li.sidebarLetter {
   @apply text-tangerine;
 }
 
+.glowbox {
+  padding: 12px 24px 12px 30px;
+  margin: 2em 0 2em 50px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.71;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+  background-color: #080c13;
+  color: #a89e8a;
+  border: 2px solid #00baba;
+}
+
 /* purgecss end ignore */
 /* purgecss start ignore */
 @tailwind  components;

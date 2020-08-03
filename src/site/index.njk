@@ -5,7 +5,7 @@ layout: default
 {% include "sidebar.njk" %}
 <div id="listContainer" class="pr-32 md:pr-56 text-left mb-4 mt-4">
  {%- for post in collections.mainPages -%}
-<div class="entryContainer flex items-baseline">
+<div class="entryContainer flex items-baseline glowbox">
 {%- if post.data.format === "book" -%}
   <i class="fas fa-book text-tangerine mr-2 opacity-75"></i>
 {%- else -%}
