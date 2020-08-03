@@ -7,9 +7,9 @@
     <title>{{ title }}</title>
     {% include "social.njk" %}
   </head>
-  <body class="container bg-carmine">
+  <body class="bg-carmine">
     {% include "header.njk" %}
-    <div class="content leading-relaxed">
+    <div class="content flex leading-relaxed">
       {{ content | safe }}
     </div>
     {% set js %}

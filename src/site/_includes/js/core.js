@@ -10,5 +10,8 @@ function btnHandler(selector, callback) {
 
 function contentCollapse (event) {
   var content = event.target.nextElementSibling;
-  content.classList.toggle('hidden');
+  content.classList.toggle('shortText');
+  content.classList.toggle('invisible');
+  content.classList.toggle('opacity-0');
+  content.classList.toggle('opacity-100');
 }
