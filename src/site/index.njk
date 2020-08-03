@@ -6,7 +6,11 @@ layout: default
 <div id="listContainer" class="pr-32 md:pr-56 text-left mb-4 mt-4">
  {%- for post in collections.mainPages -%}
 <div class="entryContainer flex items-baseline">
+{%- if post.data.format === "book" -%}
   <i class="fas fa-book text-tangerine mr-2 opacity-75"></i>
+{%- else -%}
+  <i class="fas fa-film text-tangerine mr-2 opacity-75"></i>
+{%- endif -%}
   <div class="entryContent flex flex-col">
   <div onclick="contentCollapse(event)" class="authorContainer text-tangerine btn-log cursor-pointer">{{ post.data.author }} - {{ post.data.title }}</div>
   <div class="contentContainer text-quicksilver shortText invisible opacity-0">{{ post.templateContent | safe }}</div>
