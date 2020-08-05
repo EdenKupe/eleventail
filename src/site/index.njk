@@ -5,16 +5,22 @@ layout: default
 {% include "sidebar.njk" %}
 <div id="listContainer" class="pr-32 md:pr-56 text-left mb-4 mt-4">
  {%- for post in collections.mainPages -%}
-<div class="entryContainer flex items-baseline glowbox">
-{%- if post.data.format === "book" -%}
-  <i class="fas fa-book text-tangerine mr-2 opacity-75"></i>
-{%- else -%}
-  <i class="fas fa-film text-tangerine mr-2 opacity-75"></i>
-{%- endif -%}
+<div onclick="contentCollapse(event)" class="entryContainer flex items-start justify-between glowbox cursor-pointer">
   <div class="entryContent flex flex-col">
-  <div onclick="contentCollapse(event)" class="authorContainer text-tangerine btn-log cursor-pointer">{{ post.data.author }} - {{ post.data.title }}</div>
+  <div class="authorContainer text-tangerine cursor-pointer">{{ post.data.author }} - {{ post.data.title }}</div>
   <div class="contentContainer text-quicksilver shortText invisible opacity-0">{{ post.templateContent | safe }}</div>
   </div>
+  <div class="iconContainer flex">
+  <span class="fa-stack">
+  <i class="fa fa-circle fa-stack-2x icon-background"></i>
+  {%- if post.data.format === "book" -%}
+  <i class="fas fa-book fa-stack-1x text-tiffany mr-2 opacity-100"></i>
+{%- else -%}
+  <i class="fas fa-film fa-stack-1x text-tiffany mr-2 opacity-100"></i>
+{%- endif -%}
+</span>
+<i onclick="contentRotate(event)" class="fas fa-caret-down text-tangerine ml-4 opacity-75"></i>
+</div>
 </div>
 {%- endfor -%}
 </div>
