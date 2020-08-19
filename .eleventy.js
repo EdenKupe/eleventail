@@ -48,9 +48,14 @@ module.exports = function(eleventyConfig) {
       if (a.data.author && b.data.author) {  
         let nameA = a.data.author.toLowerCase();
         let nameB = b.data.author.toLowerCase();
+        let firstA = nameA.charAt(0);
+        let firstB = nameB.charAt(0);
+        a.data.category = firstA;
+        b.data.category = firstB;
         if (nameA < nameB) return -1;
         else if (nameA > nameB) return 1;
         else return 0;
+        
       }
     });
 });

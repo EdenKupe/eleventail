@@ -17,7 +17,8 @@
       {% include "js/core.js" %}
       {% include "js/hello.js" %}
     {% endset %}
-    <script>{{ js | jsmin | safe }}</script>
+    <script src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
+    <script>{{ js | safe }}</script>
   </body>
 </html>
 

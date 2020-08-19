@@ -5,7 +5,7 @@ layout: default
 {% include "sidebar.njk" %}
 <div id="listContainer" class="pr-32 md:pr-56 text-left mb-4 mt-4">
  {%- for post in collections.mainPages -%}
-<div onclick="contentCollapse(event)" class="entryContainer flex items-start justify-between glowbox cursor-pointer">
+<div onclick="contentCollapse(event)" id="letter-{{ post.data.category }}" class="entryContainer flex items-start justify-between glowbox cursor-pointer">
   <div class="entryContent flex flex-col">
   <div class="authorContainer flex items-center text-tangerine cursor-pointer">
     {{ post.data.author }} - {{ post.data.title }}

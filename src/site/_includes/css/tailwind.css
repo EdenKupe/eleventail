@@ -21,11 +21,44 @@
 }
 
 #sidebar {
-  flex: 2;
+  flex: 1;
+  @apply self-start sticky top-0;
 }
 
-li.sidebarLetter {
-  @apply text-tangerine;
+a.sidebarLetter {
+  @apply text-tangerine border border-tangerine border-solid w-full pr-4 text-right mb-4;
+  margin-right: 22rem;
+  border-left: solid 0px transparent;
+  transform: skew(-0.65rad);
+  transition: transform 0.2s linear;
+}
+
+a.sidebarLetter.is-active {
+  color: red;
+}
+
+a.sidebarLetter:hover {
+  transform: translateX(150px) skew(-0.65rad);
+  @apply border-tiffany;
+}
+
+a.sidebarLetter span {
+  display: block;
+  transform: skew(0.65rad);
+}
+
+a.sidebarLetter span:after {
+  content: '';
+  height: 28px;
+  width: 10px;
+  top: -1px;
+  right: -35px;
+  transform: skew(-0.65rad);
+  @apply absolute bg-tangerine;
+}
+
+a.sidebarLetter:hover span:after {
+  @apply bg-tiffany;
 }
 
 .glowbox {
@@ -36,9 +69,7 @@ li.sidebarLetter {
   line-height: 1.71;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   padding-left: 15px;
-  background-color: #080c13;
-  color: #a89e8a;
-  border: 2px solid #00baba;
+  @apply bg-rich text-grollo border-2 border-solid border-tiffany;
 }
 
 /* .iconContainer i {

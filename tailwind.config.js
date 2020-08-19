@@ -7,7 +7,9 @@ module.exports = {
         tangerine: '#F4998D',
         begonia: '#F97373',
         quicksilver: '#AFA694',
-        sunset: '#FE5F55'
+        sunset: '#FE5F55',
+        rich: '#080c13',
+        grollo: '#a89e8a'
       }
     }
   },
