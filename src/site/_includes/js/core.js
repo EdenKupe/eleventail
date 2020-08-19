@@ -46,8 +46,6 @@ function contentRotate(event) {
 
 // In-view function
 const handleView = item => {
-  console.log('hello');
-  console.log(item);
   const linkEl = document.querySelector(`#link-${item}`);
 
   let offsetHeight = window.innerHeight
@@ -56,9 +54,19 @@ const handleView = item => {
   });
 
   inView(`#letter-${item}`)
-    .on("enter", () => linkEl.classList.add('is-active'))
-    .on("exit", el  => linkEl.classList.remove('is-active'))
+    .on("enter", () => {
+      if (linkEl.classList.contains('is-active')) {
+        return false;
+      } else {
+        const prevEl = document.querySelector(`.is-active`);
+        if (prevEl) {
+          prevEl.classList.remove('is-active');
+        }
+        linkEl.classList.add('is-active');
+      }
+      
+  });
 };
 
 // Apply method on each DOM element 
-["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r","s", "t", "u", "v", "w", "x", "y", "z" ].forEach(handleView);
+["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r","s", "t", "u", "v", "w", "x", "y", "z"].forEach(handleView);

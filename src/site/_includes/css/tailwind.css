@@ -34,7 +34,8 @@ a.sidebarLetter {
 }
 
 a.sidebarLetter.is-active {
-  color: red;
+  transform: translateX(150px) skew(-0.65rad);
+  @apply border-tiffany;
 }
 
 a.sidebarLetter:hover {
@@ -60,6 +61,11 @@ a.sidebarLetter span:after {
 a.sidebarLetter:hover span:after {
   @apply bg-tiffany;
 }
+
+a.sidebarLetter.is-active span:after {
+  @apply bg-tiffany;
+}
+
 
 .glowbox {
   padding: 12px 4px 12px 30px;
