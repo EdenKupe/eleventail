@@ -1,5 +1,6 @@
 const { DateTime }  = require('luxon');
 const util          = require('util');
+const pluginSass = require("eleventy-plugin-sass");
 
 module.exports = function(eleventyConfig) {
 
@@ -40,6 +41,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/site/fonts");
   eleventyConfig.addPassthroughCopy("./src/site/images");
   eleventyConfig.addPassthroughCopy("./src/site/css");
+
+  // add SASS plugin
+
+  eleventyConfig.addPlugin(pluginSass);
 
   // creating a custom collection of all posts, sorted alphabetically
 
