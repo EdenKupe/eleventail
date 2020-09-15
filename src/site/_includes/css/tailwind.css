@@ -3,6 +3,11 @@
 /* purgecss end ignore */
 /* purgecss start ignore */
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .contentContainer {
   -webkit-transition: opacity .15s linear;
   -moz-transition: opacity .15s linear;
@@ -10,6 +15,10 @@
   -o-transition: opacity .15s linear;
   transition: opacity .15s linear;
   height: 100%;
+}
+
+.mainContent {
+  @apply flex-col pr-64;
 }
 
 .shortText {
@@ -23,6 +32,15 @@
 #sidebar {
   flex: 1;
   @apply self-start sticky top-0;
+}
+
+h1 {
+  @apply text-5xl mb-6 mt-6 ml-12 font-bold;
+  color: #A30000;
+}
+
+.mainContent p {
+  @apply text-xl text-baby m-0 mb-5 ml-12 leading-6;
 }
 
 a.sidebarLetter {
@@ -75,7 +93,11 @@ a.sidebarLetter.is-active span:after {
   line-height: 1.71;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   padding-left: 15px;
-  @apply bg-rich text-grollo border-2 border-solid border-tiffany;
+  @apply text-grollo bg-carmine border-2 border-solid border-tiffany;
+}
+
+.authorContainer {
+  @apply text-tangerine;
 }
 
 /* .iconContainer i {

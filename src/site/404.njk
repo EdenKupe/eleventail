@@ -11,28 +11,28 @@
   </head>
   <body class="bg-carmine">
     <div class="content flex leading-relaxed h-screen">
-<!-- animation from this beautiful codepen: https://codepen.io/YusukeNakaya/pen/abNdeOj -->
-<div class="h-full w-1/2 m-0 mr-auto ml-auto flex flex-col justify-center items-center">
-<span class="mb-10 text-4xl text-tangerine">404</span>
-    <div class="night">
-    <div class="window">
-        {% for i in range(0,2) %}
-        <div class="stars">
-            {% for a in range(0,30) %}
-            <div class="shooting"></div>
-            {% endfor %}
-            {% for b in range(0,250) %}
-            <div class="star"></div>
-            {% endfor %}
+        <!-- animation from this beautiful codepen: https://codepen.io/YusukeNakaya/pen/abNdeOj -->
+        <div class="h-full w-1/2 m-0 mr-auto ml-auto flex flex-col justify-center items-center">
+            <span class="mb-10 text-4xl text-tangerine">404</span>
+            <div class="night">
+                <div class="window">
+                    {% for i in range(0,2) %}
+                        <div class="stars">
+                            {% for a in range(0,30) %}
+                                <div class="shooting"></div>
+                            {% endfor %}
+                            {% for b in range(0,250) %}
+                                <div class="star"></div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
         </div>
-        {% endfor %}
+        <div class="container flex flex-col items-center mt-10 text-sunset">
+            <span><b>"What is an anarchist? One who, choosing, accepts the responsibility of choice."</b></span>
+            <span class="text-sunset">Ursula K. Le Guin, <em>The Day Before the Revolution</em>.</span>
+            <a class="mt-10 text-tiffany" href="/">Click here to go home</a>
+        </div>
     </div>
-    </div>
-    <div class="container flex flex-col items-center mt-10 text-sunset">
-        <span><b>"What is an anarchist? One who, choosing, accepts the responsibility of choice."</b></span>
-        <span class="text-sunset">Ursula K. Le Guin, <em>The Day Before the Revolution</em>.</span>
-        <a class="mt-10 text-tiffany" href="/">Click here to go home</a>
-    </div>
-</div>
 </body>
 </html>
