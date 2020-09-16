@@ -2,9 +2,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        tiffany: '#7D2500',
+        tiffany: '#D3AAFF',
         carmine: '#222233',
-        tangerine: '#F4998D',
+        tangerine: '#AACCFF',
         begonia: '#F97373',
         quicksilver: '#AFA694',
         sunset: '#FE5F55',
