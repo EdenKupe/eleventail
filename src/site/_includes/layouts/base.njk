@@ -13,6 +13,7 @@
     {% include "header.njk" %}
     <div class="content flex leading-relaxed">
       {{ content | safe }}
+      <a id="backToTop" href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
     {% set js %}
       {% include "js/core.js" %}

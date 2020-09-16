@@ -123,6 +123,16 @@ a.sidebarLetter.is-active span:after {
   -webkit-transform:rotate(180deg);
 }
 
+#backToTop {
+  position: fixed;
+  color: #F97373;
+  font-size: 1.25rem;
+  height: 23px;
+  top: 96vh;
+  right: 10px;
+  font-family: FontAwesome;
+}
+
 /* purgecss end ignore */
 /* purgecss start ignore */
 @tailwind  components;
