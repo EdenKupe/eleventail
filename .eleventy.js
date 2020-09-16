@@ -4,6 +4,13 @@ const pluginSass = require("eleventy-plugin-sass");
 
 module.exports = function(eleventyConfig) {
 
+  //passing markdown options
+  let markdownIt = require("markdown-it");
+  let options = {
+    breaks: true
+  }
+
+  eleventyConfig.setLibrary("md", markdownIt(options));
 
   // Layout aliases for convenience
   eleventyConfig.addLayoutAlias('default', 'layouts/base.njk');
