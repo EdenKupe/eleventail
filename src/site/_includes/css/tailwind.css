@@ -47,6 +47,15 @@ html, body {
   flex: 5;
 }
 
+.boxContainer {
+  @apply flex flex-col mt-8 mb-8;
+}
+
+.boxHeader {
+  @apply h-6 bg-tiffany;
+  margin-left: 50px;
+}
+
 #sidebar {
   @apply self-start sticky top-0;
 }
@@ -109,8 +118,8 @@ a.sidebarLetter.is-active span:after {
 
 .glowbox {
   padding: 12px 4px 12px 30px;
-  margin: 2em 0 2em 50px;
-  border-radius: 10px;
+  margin: 0 0 0 50px;
+  border-radius: 0;
   font-size: 16px;
   line-height: 1.71;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -121,10 +130,6 @@ a.sidebarLetter.is-active span:after {
 .authorContainer {
   @apply text-tangerine;
 }
-
-/* .iconContainer i {
-  
-} */
 
 .icon-background {
   @apply text-tiffany;
