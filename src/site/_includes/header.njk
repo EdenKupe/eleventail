@@ -1,20 +1,10 @@
 
-<header class="bg-teal-500 flex justify-between px-4 py-2 mb-10 hidden">
-  {% if page.url == "/" %}
-  <h1 class=" text-white font-medium text-2xl">AnarchySF2.0</h1>
-  {% else %}
-  <h1 class=" text-white font-medium text-2xl"><a href="/">ElevenTail <small class="text-sm">a site scaffold</small></a></h1>
-  {% endif %}
-  <nav>
-    {%
-      set linkList = [
-        { "url": "/about" , "text": "About"},
-        { "url": "/blog" , "text": "Blog"},
-        { "url": pkg.repository.url , "text": "GitHub"}
-      ]
-    %}
-    {% include "navigation-links.njk" %}
-  </nav>
+<header class="bg-carmine flex justify-around items-center w-full h-24">
+  <img id="siteLogo" src="/images/astrologohor.png" style="width:320px;"/>
+  <div id="linksContainer" class="flex justify-between">
+    <a href="#" class="siteLink">About us</a>
+    <a href="#" class="siteLink">Contribute</a>
+  </div>
 </header>
 
 

@@ -10,7 +10,8 @@ module.exports = {
         sunset: '#FE5F55',
         rich: '#080c13',
         grollo: '#a89e8a',
-        baby: '#D7C0D0'
+        baby: '#D7C0D0',
+        fire: '#C1292E'
       }
     }
   },

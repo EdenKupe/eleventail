@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
   //passing markdown options
   let markdownIt = require("markdown-it");
   let options = {
+    html: true,     
+    linkify: false, 
     breaks: true
   }
 

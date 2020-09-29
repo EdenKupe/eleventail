@@ -3,11 +3,6 @@
 /* purgecss end ignore */
 /* purgecss start ignore */
 
-html, body {
-  max-width: 100vw;
-  height: 100vh;
-}
-
 * {
   max-width: 100%;
 }
@@ -17,49 +12,24 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#setContent {
-  @apply flex leading-relaxed;
+html, body {
+  max-width: 100vw;
+  height: 100vh;
 }
 
-#contentWrapper {
-  @apply flex flex-col leading-relaxed;
-  max-width: 80%;
+/* all links are now red */
+
+a {
+  @apply text-fire;
 }
 
-.contentContainer {
-  -webkit-transition: opacity .15s linear;
-  -moz-transition: opacity .15s linear;
-  -ms-transition: opacity .15s linear;
-  -o-transition: opacity .15s linear;
-  transition: opacity .15s linear;
-  height: 100%;
-}
+/* style the header of the page */
 
-#mainContent {
-  @apply flex-col pr-64 flex leading-relaxed;
+header {
+  border-bottom: 1px solid #29303d;
+  box-shadow: 0 1rem 5rem -0.5rem #000;
+  @apply fixed;
 }
-
-.shortText {
-  @apply h-1;
-}
-
-#listContainer {
-  flex: 5;
-}
-
-.boxContainer {
-  @apply flex flex-col mt-8 mb-8;
-}
-
-.boxHeader {
-  @apply h-6 bg-tiffany;
-  margin-left: 50px;
-}
-
-#sidebar {
-  @apply self-start sticky top-0;
-}
-
 
 h1 {
   @apply text-5xl mb-6 mt-6 ml-12 font-bold;
@@ -70,9 +40,44 @@ p {
   @apply mb-5;
 }
 
+/* the top links that appear in the header */
+
+.siteLink {
+  margin-right: 10px;
+}
+
+.siteLink:last-child {
+  margin-right: 0;
+}
+
+/* main page content positioning stuff */
+
+#setContent {
+  @apply flex leading-relaxed;
+  padding-top: 140px;
+}
+
+#contentWrapper {
+  @apply flex flex-col leading-relaxed;
+  max-width: 80%;
+}
+
+#mainContent {
+  @apply flex-col pr-64 flex leading-relaxed;
+}
+
+#sidebar {
+  @apply self-start sticky;
+  top: 140px;
+}
+
+/* main content paragraph hits different */
+
 #mainContent p {
   @apply text-xl text-baby m-0 mb-5 ml-12 leading-6;
 }
+
+/* links in the sidebar hit different */
 
 a.sidebarLetter {
   @apply text-tangerine border border-tangerine border-solid w-full pr-4 text-right mb-4;
@@ -115,6 +120,33 @@ a.sidebarLetter.is-active span:after {
   @apply bg-tiffany;
 }
 
+/* main page box stuff */
+
+.contentContainer {
+  -webkit-transition: opacity .15s linear;
+  -moz-transition: opacity .15s linear;
+  -ms-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+  height: 100%;
+}
+
+.shortText {
+  @apply h-1;
+}
+
+#listContainer {
+  flex: 5;
+}
+
+.boxContainer {
+  @apply flex flex-col mt-8 mb-8;
+}
+
+.boxHeader {
+  @apply h-6 bg-tiffany;
+  margin-left: 50px;
+}
 
 .glowbox {
   padding: 12px 4px 12px 30px;
