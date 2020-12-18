@@ -19,11 +19,11 @@ layout: default
   <div class="boxContainer">
     {%- if post.data.format === "book" -%}
     <div class="boxHeader bookIcon">
-      <i class="typeIcon fas fa-book text-carmine ml-2 opacity-100"></i>
+      <i class="typeIcon fas fa-book text-secondary ml-2 opacity-100"></i>
     </div>
     {%- else -%}
     <div class="boxHeader videoIcon">
-      <i class="typeIcon fas fa-film text-carmine ml-2 opacity-100"></i>
+      <i class="typeIcon fas fa-film text-secondary ml-2 opacity-100"></i>
     </div>
     {%- endif -%}
     <div onclick="contentCollapse(event)" id="letter-{{ post.data.category }}" class="entryContainer flex items-start justify-between glowbox cursor-pointer">
@@ -33,7 +33,7 @@ layout: default
       </div>
       <div class="contentContainer text-baby shortText invisible opacity-0">{{ post.templateContent | safe }}</div>
       </div>
-      <div class="iconContainer flex">
+      <div class="iconContainer z-0 flex">
     <i onclick="contentRotate(event)" class="fas fa-caret-down text-tangerine ml-4 opacity-75"></i>
     </div>
     </div>

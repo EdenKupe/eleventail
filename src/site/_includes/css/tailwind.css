@@ -20,7 +20,7 @@ html, body {
 /* all links are now red */
 
 a {
-  @apply text-fire;
+  @apply text-secondary;
 }
 
 /* style the header of the page */
@@ -32,8 +32,7 @@ header {
 }
 
 h1 {
-  @apply text-5xl mb-6 mt-6 ml-12 font-bold;
-  color: #F1D302;
+  @apply text-5xl mb-6 mt-6 ml-12 font-bold text-primary;
 }
 
 p {
@@ -41,6 +40,10 @@ p {
 }
 
 /* the top links that appear in the header */
+
+#linksContainer .siteLink {
+  color: #fff;
+}
 
 .siteLink {
   margin-right: 10px;
@@ -59,7 +62,7 @@ p {
 
 #contentWrapper {
   @apply flex flex-col leading-relaxed;
-  max-width: 80%;
+  max-width: 60%;
 }
 
 #mainContent {
@@ -74,13 +77,13 @@ p {
 /* main content paragraph hits different */
 
 #mainContent p {
-  @apply text-xl text-baby m-0 mb-5 ml-12 leading-6;
+  @apply text-xl text-text m-0 mb-5 ml-12 leading-6;
 }
 
 /* links in the sidebar hit different */
 
 a.sidebarLetter {
-  @apply text-tangerine border border-tangerine border-solid w-full pr-4 text-right mb-4;
+  @apply text-text border border-box border-solid w-full pr-4 text-right mb-4;
   margin-right: 22rem;
   border-left: solid 0px transparent;
   transform: skew(-0.65rad);
@@ -89,12 +92,12 @@ a.sidebarLetter {
 
 a.sidebarLetter.is-active {
   transform: translateX(150px) skew(-0.65rad);
-  @apply border-tiffany;
+  @apply border-secondary;
 }
 
 a.sidebarLetter:hover {
   transform: translateX(150px) skew(-0.65rad);
-  @apply border-tiffany;
+  @apply border-box;
 }
 
 a.sidebarLetter span {
@@ -109,15 +112,15 @@ a.sidebarLetter span:after {
   top: -1px;
   right: -35px;
   transform: skew(-0.65rad);
-  @apply absolute bg-tangerine;
+  @apply absolute bg-box;
 }
 
 a.sidebarLetter:hover span:after {
-  @apply bg-tiffany;
+  @apply bg-secondary;
 }
 
 a.sidebarLetter.is-active span:after {
-  @apply bg-tiffany;
+  @apply bg-secondary;
 }
 
 /* main page box stuff */
@@ -144,7 +147,7 @@ a.sidebarLetter.is-active span:after {
 }
 
 .boxHeader {
-  @apply h-6 bg-tiffany;
+  @apply h-6 bg-box;
   margin-left: 50px;
 }
 
@@ -156,15 +159,15 @@ a.sidebarLetter.is-active span:after {
   line-height: 1.71;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   padding-left: 15px;
-  @apply text-grollo bg-carmine border-2 border-solid border-tiffany;
+  @apply text-text bg-background border-2 border-solid border-box;
 }
 
 .authorContainer {
-  @apply text-tangerine;
+  @apply text-title;
 }
 
 .icon-background {
-  @apply text-tiffany;
+  @apply text-secondary;
 }
 
 .fa-caret-down {
