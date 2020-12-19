@@ -1,3 +1,23 @@
+
+// slugify strings
+function string_to_slug (str) {
+  str = str.replace(/^\s+|\s+$/g, ''); // trim
+  str = str.toLowerCase();
+
+  // remove accents, swap ñ for n, etc
+  var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+  var to   = "aaaaeeeeiiiioooouuuunc------";
+  for (var i=0, l=from.length ; i<l ; i++) {
+      str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+  }
+
+  str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+      .replace(/\s+/g, '-') // collapse whitespace and replace by -
+      .replace(/-+/g, '-'); // collapse dashes
+
+  return str;
+}
+
 // simple button click event handler
 function btnHandler(selector, callback) {
   var btn = document.querySelector(selector);
@@ -79,3 +99,57 @@ function activateLink (event) {
   }
   event.target.parentNode.classList.add('is-active');
 }
+
+// search stuff
+var client = algoliasearch("3A13LF0NQN", "2066d124b58e7b6d9aabc19d2a38fc40");
+var anarchyIndex = client.initIndex("anarchy");
+var search = document.getElementById("aa-search-input");
+
+const searchInstance = autocomplete(
+  "#aa-search-input",
+  {
+    debug: false
+  },
+  [
+    {
+      source: autocomplete.sources.hits(anarchyIndex, { hitsPerPage: 7 }),
+      displayKey: "",
+      name: "anarchy" /* class aa-dataset-anarchy */,
+      templates: {
+        suggestion: function(suggestion) {
+          console.log(suggestion);
+          let value = suggestion.pagename;
+          let content = suggestion.content;
+          let link = suggestion.permalink;
+          let title = $("title");
+          let titletext = title.text();
+          if (suggestion._highlightResult.author) {
+            value = suggestion._highlightResult.author.value;
+          }
+          if (suggestion._snippetResult.content) {
+            content = suggestion._snippetResult.content.value;
+          }
+          let initialText = suggestion.author + "-" + suggestion.title;
+          let linkText = string_to_slug(initialText);
+          suggestion.permalink = linkText;
+          return (
+            '<span class="searchtitlecontainer">' +
+            '<a href="#' + linkText + '" + class="searchtitle" href="' +
+            link +
+            '">' +
+            value +
+            "</a> </span>" +
+            "<br />" +
+            '<a class="searchlinktext" href="#' +
+            linkText +
+            '">' +
+            '<span class="searchcontentcontainer">' +
+            content +
+            "</span> </a> "
+          );
+        }
+      },
+      empty: '<div class="aa-empty">No results found!</div>'
+    }
+  ]
+);

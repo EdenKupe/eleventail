@@ -1,5 +1,6 @@
 const { DateTime }  = require('luxon');
 const util          = require('util');
+// adding SASS for the cool 404 animation
 const pluginSass = require("eleventy-plugin-sass");
 
 module.exports = function(eleventyConfig) {
@@ -73,6 +74,7 @@ module.exports = function(eleventyConfig) {
       }
     });
 });
+
 
   return  {
     dir: {
