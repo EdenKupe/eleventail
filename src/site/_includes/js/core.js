@@ -1,5 +1,9 @@
+anchors.options = {
+  placement: 'left',
+};
+anchors.add('.authorName');
 
-// slugify strings
+// slugify strings util function
 function string_to_slug (str) {
   str = str.replace(/^\s+|\s+$/g, ''); // trim
   str = str.toLowerCase();
@@ -129,7 +133,7 @@ const searchInstance = autocomplete(
           if (suggestion._snippetResult.content) {
             content = suggestion._snippetResult.content.value;
           }
-          let initialText = suggestion.author + "-" + suggestion.title;
+          let initialText = suggestion.author;
           let linkText = string_to_slug(initialText);
           suggestion.permalink = linkText;
           return (
