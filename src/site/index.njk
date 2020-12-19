@@ -14,7 +14,7 @@ layout: default
 
     <p>Let's get started! Use the sidebar on the left to choose an entry, scroll down to start exploring or <a target="_blank" onclick="randomLink(event);">click here</a> to jump to a random entry!</p>
     </div>
-  <div id="listContainer" class="content pr-32 md:pr-56 text-left mb-4 mt-4">
+  <div id="listContainer" class="content text-left mb-4 mt-4">
   {%- for post in collections.mainPages -%}
   <div class="boxContainer">
     {%- if post.data.format === "book" -%}
