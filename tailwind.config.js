@@ -7,7 +7,7 @@ module.exports = {
         secondary: '#5773FF',
         text: '#baaec4',
         box: '#242f42',
-        title: '#d367c1',
+        title: '#ab79d6',
       }
     }
   },
