@@ -14,7 +14,24 @@
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-  </head>
+    <style>
+    @font-face {
+      font-family: Wotfard;
+      src: url("/fonts/wotfard-regular-webfont.woff2") format('woff2'), url("/src/site/fonts/wotfard-regular-webfont.woff2") format('woff2');
+    }
+    @font-face {
+      font-family: Wotfard;
+      src: url("/fonts/wotfard-medium-webfont.woff2") format("woff2"), url("/src/site/fonts/wotfard-medium-webfont.woff2") format("woff2");
+      font-weight: 500;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    .fonts-loaded body {
+      font-family: Wotfard, sans-serif;
+    }
+</style> 
+</head>
   <body class="bg-background">
     {% include "header.njk" %}
     <div id="setContent" class="content">
@@ -26,6 +43,30 @@
     {% endset %}
     <script src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
     <script>{{ js | safe }}</script>
+    <script>
+    //loading fonts
+
+    (function() {
+
+      // Optimization for Repeat Views
+      if( sessionStorage.fontsLoadedFoutWithClass ) {
+        document.documentElement.className += "fonts-loaded";
+        return;
+      }
+
+      if( "fonts" in document ) {
+        Promise.all([
+          document.fonts.load("1em Wotfard"),
+          document.fonts.load("500 1em Wotfard"),
+        ]).then(function () {
+          document.documentElement.className += "fonts-loaded";
+
+          // Optimization for Repeat Views
+          sessionStorage.fontsLoadedFoutWithClass = true;
+        });
+      }
+    })();
+</script>
   </body>
 </html>
 

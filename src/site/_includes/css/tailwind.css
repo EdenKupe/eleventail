@@ -3,21 +3,7 @@
 /* purgecss end ignore */
 /* purgecss start ignore */
 
-@font-face {
-  font-family: Wotfard;
-  src: url("/fonts/wotfard-regular-webfont.woff2") format('woff2'), url("/src/site/fonts/wotfard-regular-webfont.woff2") format('woff2');
-}
-@font-face {
-  font-family: Wotfard;
-  src: url("/fonts/wotfard-medium-webfont.woff2") format("woff2"), url("/src/site/fonts/wotfard-medium-webfont.woff2") format("woff2");
-  font-weight: 500;
-}
-body {
-  font-family: sans-serif;
-}
-.fonts-loaded body {
-  font-family: Wotfard, sans-serif;
-}
+
 
 * {
   max-width: 100%;
@@ -166,7 +152,7 @@ span.searchcontentcontainer {
 }
 
 .aa-suggestion:last-of-type::after {
-  background-image: url(../img/Algolia-logo.svg.png);
+  background-image: url(../images/Algolia-logo.svg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -211,18 +197,26 @@ span.searchcontentcontainer {
 }
 
 #astronaut {
+  @apply flex flex-col items-center sticky;
   grid-column: 3 / 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  top: 140px;
+}
+
+#astronaut img {
+  @apply sticky mt-6 opacity-25;
+  width: 340px;
+  filter: grayscale(100%);
+  top: 164px;
 }
 
 #morelinks {
+  @apply sticky justify-center items-center;
   grid-column: 2 / 3;
-  justify-items: center;
+  top: 286px;
 }
 
 #morelinks a {
-  @apply text-text;
+  @apply text-text capitalize;
 }
 
 #mainContent {
