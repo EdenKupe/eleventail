@@ -157,3 +157,26 @@ const searchInstance = autocomplete(
     }
   ]
 );
+
+//loading fonts
+
+(function() {
+
+  // Optimization for Repeat Views
+  if( sessionStorage.fontsLoadedFoutWithClass ) {
+    document.documentElement.className += "fonts-loaded";
+    return;
+  }
+
+  if( "fonts" in document ) {
+    Promise.all([
+      document.fonts.load("1em Wotfard"),
+      document.fonts.load("500 1em Wotfard"),
+    ]).then(function () {
+      document.documentElement.className += "fonts-loaded";
+
+      // Optimization for Repeat Views
+      sessionStorage.fontsLoadedFoutWithClass = true;
+    });
+  }
+})();
