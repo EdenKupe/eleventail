@@ -36,12 +36,12 @@ header {
 }
 
 #siteLogo {
-  grid-column: 2 / 2;
+  grid-column: 3 / 3;
   margin-top: 5px;
 }
 
 #rightHeader {
-  grid-column: 4 / 8;
+  grid-column: 5 / 9;
   display: flex;
   justify-content: space-between;
 }
@@ -201,12 +201,12 @@ span.searchcontentcontainer {
 
 #contentWrapper {
   @apply flex flex-col leading-relaxed;
-  grid-column: 2 / 8;
+  grid-column: 3 / 9;
 }
 
 #astronaut {
   @apply flex flex-col items-center sticky;
-  grid-column: 9 / 11;
+  grid-column: 10 / 12;
   top: 140px;
 }
 

@@ -112,7 +112,7 @@ var search = document.getElementById("aa-search-input");
 const searchInstance = autocomplete(
   "#aa-search-input",
   {
-    debug: false
+    debug: true
   },
   [
     {
