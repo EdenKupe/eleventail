@@ -332,7 +332,7 @@ a.sidebarLetter.is-active span:after {
 }
 
 .anchorjs-link {
-  visiblity: none;
+  visibility:hidden;
 }
 
 .authorName {
