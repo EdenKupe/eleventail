@@ -340,6 +340,10 @@ a.sidebarLetter.is-active span:after {
   scroll-margin-top: 11em;
 }
 
+.authorName.randomlySelected {
+  @apply text-primary;
+}
+
 .titleName {
   @apply inline-block;
 }

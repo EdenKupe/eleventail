@@ -48,7 +48,6 @@ function contentCollapse (event) {
     content.classList.toggle('invisible');
     content.classList.toggle('opacity-0');
     content.classList.toggle('opacity-100');
-    console.log(event.target);
     var contentCaret = event.target.closest('.entryContainer').querySelector('.fa-caret-down');
     contentCaret.classList.toggle('rotate');
   } else if (event.target.classList == '') {
@@ -72,7 +71,8 @@ function contentRotate(event) {
 const handleView = item => {
   const linkEl = document.querySelector(`#link-${item}`);
 
-  let offsetHeight = window.innerHeight
+  let offsetHeight = window.innerHeight;
+  console.log(offsetHeight);
   inView.offset({
     bottom:offsetHeight
   });
@@ -96,12 +96,36 @@ const handleView = item => {
 ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m", "n", "o", "p", "q", "r","s", "t", "u", "v", "w", "x", "y", "z"].forEach(handleView);
 
 function activateLink (event) {
-  console.log('active');
   const prevEl = document.querySelector(`.is-active`);
   if (prevEl) {
     prevEl.classList.remove('is-active');
   }
   event.target.parentNode.classList.add('is-active');
+}
+
+//jump to a random entry on click
+function randomEntry (event) {
+  event.preventDefault();
+  var pageLinks = document.getElementsByClassName("authorName");
+  // get a random number between 0 and the number of links
+    var randIdx = Math.random() * pageLinks.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    //get that object from the array
+    chosenLink = pageLinks[randIdx];
+    //get its ID
+    linkName = $(chosenLink).attr('id');
+    //find the anhcor that corresponds to it
+    var target = $('a[href*="' + linkName + '"]');
+    //got a target? scroll to it
+    if (target) {
+      var targetLocation = target.offset().top - 210;
+      window.scrollTo(0, targetLocation);
+      $('.authorName').removeClass('randomlySelected');
+      $(target).parent().addClass('randomlySelected');
+    }
+    //track that this function has been used for Reasons
+    randomUsed = true;
 }
 
 // search stuff
@@ -121,7 +145,6 @@ const searchInstance = autocomplete(
       name: "anarchy" /* class aa-dataset-anarchy */,
       templates: {
         suggestion: function(suggestion) {
-          console.log(suggestion);
           let value = suggestion.pagename;
           let content = suggestion.content;
           let link = suggestion.permalink;
