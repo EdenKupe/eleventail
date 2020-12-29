@@ -160,13 +160,13 @@ span.searchcontentcontainer {
 }
 
 .aa-suggestion:last-of-type::after {
-  background-image: url(../images/Algolia-logo.svg.png);
+  background-image: url(../images/Algolia-logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   content: "";
   width: 110px;
-  height: 30px;
+  height: 40px;
   z-index: 1001;
   display: block;
   margin-top: 30px;
