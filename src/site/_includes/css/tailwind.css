@@ -224,7 +224,7 @@ span.searchcontentcontainer {
 }
 
 #morelinks a {
-  @apply text-text text-xl capitalize;
+  @apply text-white text-xl capitalize;
 }
 
 #mainContent {
