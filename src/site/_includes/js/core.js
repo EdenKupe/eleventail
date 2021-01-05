@@ -3,6 +3,8 @@ anchors.options = {
 };
 anchors.add('.authorName');
 
+ScrollReveal().reveal('.boxContainer', {reset: true});
+
 // slugify strings util function
 function string_to_slug (str) {
   str = str.replace(/^\s+|\s+$/g, ''); // trim
@@ -122,19 +124,22 @@ function randomEntry (event) {
       $('.authorName').removeClass('randomlySelected');
       $(target).parent().addClass('randomlySelected');
     }
-    //track that this function has been used for Reasons
-    randomUsed = true;
 }
 
 // search stuff
+//defining our algolia account and search only API key
 var client = algoliasearch("3A13LF0NQN", "2066d124b58e7b6d9aabc19d2a38fc40");
+//choosing our index
 var anarchyIndex = client.initIndex("anarchy");
+//defining which HTML element is our search box
 var search = document.getElementById("aa-search-input");
 
+//the important thing about this variable is that we defined the suggestion template.
+//this control how results are then constructed and sent to the front-end
 const searchInstance = autocomplete(
   "#aa-search-input",
   {
-    debug: true
+    debug: false
   },
   [
     {
@@ -143,11 +148,12 @@ const searchInstance = autocomplete(
       name: "anarchy" /* class aa-dataset-anarchy */,
       templates: {
         suggestion: function(suggestion) {
+          //the variable names should be self-explanatory
+          //the suggestion object we access is determined by algolia 
+          //and the config on their back-end which we can access through a dashboard
           let value = suggestion.pagename;
           let content = suggestion.content;
           let link = suggestion.permalink;
-          let title = $("title");
-          let titletext = title.text();
           if (suggestion._highlightResult.author) {
             value = suggestion._highlightResult.author.value;
           }
