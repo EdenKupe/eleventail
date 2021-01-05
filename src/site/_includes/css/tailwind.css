@@ -243,6 +243,29 @@ span.searchcontentcontainer {
   @apply text-xl text-text m-0 mb-5 leading-6;
 }
 
+.textBox {
+  @apply bg-box pl-10 pt-4;
+  border-left: 3px solid #F97373;
+  border-radius: 6px 6px 6px 3px;
+}
+
+.textBox span {
+  @apply text-text font-bold text-xl;
+}
+
+/* .boxIcon {
+  @apply bg-background;
+  padding: 8px;
+} */
+
+ol li {
+  @apply text-xl text-text m-0 mb-5 leading-6;
+}
+
+.textBox ol {
+  margin-top: 10px;
+}
+
 /* links in the sidebar hit different */
 
 a.sidebarLetter {
@@ -350,6 +373,20 @@ a.sidebarLetter.is-active span:after {
 
 .icon-background {
   @apply text-secondary;
+}
+
+.fa-rocket {
+  @apply self-start text-secondary;
+  position: absolute;
+  margin-left: -70px;
+  margin-top: -34px;
+  background-color: #0e141b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  font-size: 30px;
+  border-bottom-left-radius: 0;
 }
 
 .fa-caret-down {

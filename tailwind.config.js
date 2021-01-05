@@ -6,7 +6,7 @@ module.exports = {
         primary: '#F97373',
         secondary: '#5773FF',
         text: '#baaec4',
-        box: '#242f42',
+        box: '#182635',
         title: '#ab79d6',
       }
     }

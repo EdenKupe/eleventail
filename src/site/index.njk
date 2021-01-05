@@ -12,7 +12,20 @@ layout: default
 
     <p>This archive was first collected and organized by <a href="http://benbeck.co.uk">Ben Beck</a>, who gathered and maintained it for the better part of three decades (!) As of 2019, it was redesigned and re-built by Eden Kupermintz and Yanai Sened as a collaborative effort. Eventually, the goal is for a community to help maintain and edit the wealth of knowledge on this site, as well as to add to it (follow us on <a href="https://twitter.com/anarchy_sf">Twitter</a> where we aim to organize this community).</p>
 
-    <p>Let's get started! Use the sidebar on the left to choose an entry, scroll down to start exploring or <a target="_blank" onclick="randomLink(event);">click here</a> to jump to a random entry!</p>
+    <p>Let's get started! Use the sidebar on the left to choose an entry, scroll down to start exploring or  to jump to a random entry!</p>
+
+    <aside class="textBox">
+        <i class="fas fa-rocket"></i>
+      <span>Let's get started!</span>
+      <ol>
+        <li>Scroll down to start exploring the archive</li>
+        <li>Use the sidebar on the left to jump to a letter</li>
+        <li><a href="#" onclick="randomEntry(event);">Click here</a> for a ✨random article✨</li>
+        <li>Follow us on <a href="https://twitter.com/anarchy_sf">Twitter!</a></li>
+        <li>Check out our <a href="https://anchor.fm/anarchysf">podcast!</a></li>
+      </ol>
+    </aside>
+
     </div>
   <div id="listContainer" class="content text-left mb-4 mt-4">
   {%- for post in collections.mainPages -%}
