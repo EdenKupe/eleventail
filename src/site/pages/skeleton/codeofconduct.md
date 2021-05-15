@@ -1,6 +1,6 @@
 ---
 title: Contributor Covenant Code of Conduct
-layout: default
+layout: page
 permalink: codeofconduct.html
 ---
 

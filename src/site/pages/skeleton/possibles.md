@@ -1,6 +1,6 @@
 ---
 title: Works for Consideration
-layout: default
+layout: page
 permalink: worksforconsideration.html
 ---
 

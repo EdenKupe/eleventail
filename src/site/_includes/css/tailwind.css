@@ -54,6 +54,18 @@ h1 {
   @apply text-5xl mb-6 mt-6 font-bold text-primary;
 }
 
+h2 {
+  @apply text-2xl mb-6 mt-6 font-bold text-title;
+}
+
+h3 {
+  @apply text-xl mb-6 mt-6 font-bold text-secondary;
+}
+
+h4 {
+  @apply text-lg mb-6 mt-6 font-bold italic text-text;
+}
+
 p {
   @apply mb-5;
 }
@@ -199,6 +211,12 @@ span.searchcontentcontainer {
   padding-top: 140px;
 }
 
+#setPage {
+  @apply grid leading-relaxed;
+  grid-template-columns: 385px repeat(11, 1fr);
+  padding-top: 140px;
+}
+
 #contentWrapper {
   @apply flex flex-col leading-relaxed;
   grid-column: 3 / 9;
@@ -320,6 +338,10 @@ a.sidebarLetter.is-active span:after {
   height: 100%;
 }
 
+.pageContent {
+ grid-column: 3 / 9;
+}
+
 .shortText {
   @apply h-1;
 }
@@ -412,6 +434,53 @@ a.sidebarLetter.is-active span:after {
   top: 96vh;
   right: 10px;
   font-family: FontAwesome;
+}
+
+/* table stuff */
+
+.pageContent table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: transparent;
+  table-layout: fixed;
+  margin-bottom: 50px;
+}
+
+.pageContent table thead tr {
+  color: #a89e8a;
+  height: 50px;
+  border-bottom: 3px solid #00baba;
+  font-size: 20px;
+}
+
+.pageContent table tbody tr {
+  color: #a89e8a;
+  height: 50px;
+}
+
+.pageContent table thead tr th {
+  padding: 10px 20px 10px 20px;
+  border-right: 1px solid #00baba;
+}
+
+.pageContent table thead tr th:last-child {
+  border-right: 0;
+}
+
+.pageContent table tbody tr td {
+  padding: 10px 20px 10px 20px;
+  word-wrap: break-word;
+  border-right: 1px solid #00baba;
+  border-bottom: 1px solid #00baba;
+}
+
+.pageContent table tbody tr td:last-child {
+  border-right: 0;
+}
+
+.pageContent table tbody tr:last-child td {
+  border-bottom: 0;
 }
 
 /* purgecss end ignore */

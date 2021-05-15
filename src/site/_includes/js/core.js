@@ -2,6 +2,7 @@ anchors.options = {
   placement: 'left',
 };
 anchors.add('.authorName');
+anchors.add('h2');
 
 ScrollReveal().reveal('.boxContainer', {reset: true});
 

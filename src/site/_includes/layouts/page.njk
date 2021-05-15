@@ -35,8 +35,11 @@
 </head>
   <body class="bg-background">
     {% include "header.njk" %}
-    <div id="setContent" class="content">
+    <div id="setPage">
+     <div id="mainContent" class="pageContent">
+     <h1 id="mainTitle">{{ title }}</h1>
       {{ content | safe }}
+      </div>
       <a id="backToTop" href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
     {% set js %}

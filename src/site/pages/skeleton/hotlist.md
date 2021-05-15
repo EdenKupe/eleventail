@@ -2,15 +2,21 @@
 
 title: "Recommended Items"
 permalink: recommended.html
-layout: default
+layout: page
 ---
 
 This archive can be a bit daunting; while the wealth of information contained within it is wonderful, it also lacks a clear entry point. One way to get started is to use our Randomize page to retrieve a random article. But what if you want a more curated experience? Recommendations are one of the best ways to find new books to read. Amazon knows it, we know it, and you know it as well. While creating more in-depth content is certainly on our agenda, we thought we'd get started with some "simple" recommendations.
 
 In this page, you can find the authors' recommended reading and viewing lists. The first one is Eden's (who took over running the site in 2019) and the second one is Ben's (who started the original archive). We have varying tastes but all the recommendations on these lists revolve around the subject-matter at hand, namely political, leftist, and, hopefully, anarchist science fiction.
 
-{: .glowbox}
-Scrolling is bad for you! Here's [Eden's reading list](#recommended-reading), here's [Ben's reading list](#recommended-reading-1), and here's [Ben's recommended viewing](#recommended-viewing)! Just click to scroll; we care about your fingers.
+<aside class="textBox">
+        <i class="fas fa-rocket"></i>
+      <span>Scrolling is bad for you! Click to scroll</span>
+      <ol>
+        <li>Here's <a href="#edens-list">Eden's reading list</a></li>
+        <li>Here's <a href="#bens-list">Ben's reading and viewing list</a></li>
+      </ol>
+</aside>
 
 ## Eden's List
 

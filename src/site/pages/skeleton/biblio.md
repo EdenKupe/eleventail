@@ -2,7 +2,7 @@
 
 title: "Bibliography"
 permalink: bibliography.html
-layout: default
+layout: page
 ---
 
 | Author | Year | Title |
