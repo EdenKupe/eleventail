@@ -73,7 +73,8 @@ function contentRotate(event) {
 // In-view function
 const handleView = item => {
   const linkEl = document.querySelector(`#link-${item}`);
-  let offsetHeight = window.innerHeight;
+  let offsetHeight = window.innerHeight - 190;
+  console.log(offsetHeight);
   inView.offset({
     bottom:offsetHeight
   });
