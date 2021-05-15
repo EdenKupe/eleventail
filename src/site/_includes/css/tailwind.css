@@ -448,14 +448,14 @@ a.sidebarLetter.is-active span:after {
 }
 
 .pageContent table thead tr {
-  color: #a89e8a;
+  @apply text-secondary;
   height: 50px;
   border-bottom: 3px solid #00baba;
   font-size: 20px;
 }
 
 .pageContent table tbody tr {
-  color: #a89e8a;
+  @apply text-text;
   height: 50px;
 }
 
