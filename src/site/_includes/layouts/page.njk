@@ -40,6 +40,7 @@
      <h1 id="mainTitle">{{ title }}</h1>
       {{ content | safe }}
       </div>
+      {% include "navigation-links.njk" %}
       <a id="backToTop" href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
     {% set js %}
