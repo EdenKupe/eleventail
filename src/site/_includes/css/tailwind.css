@@ -29,7 +29,9 @@ a {
 /* style the header of the page */
 
 header {
-  box-shadow: 0 1rem 5rem -0.5rem #0e141b;
+  box-shadow: 0 1rem 5rem -0.5rem #000;
+  border-bottom: 1px solid #29303d;
+  background-color: #0e141f;
   grid-template-columns: 385px repeat(11, 1fr);
   grid-template-rows: 1fr;
   @apply fixed;
@@ -38,6 +40,10 @@ header {
 #siteLogo {
   grid-column: 3 / 3;
   margin-top: 5px;
+}
+
+#siteLogo img {
+  min-width: 196px;
 }
 
 #rightHeader {
@@ -76,12 +82,13 @@ p {
   grid-column: 3 / 5;
   margin-right: 20px;
   max-width: 100%;
-  flex: 1;  
+  min-width: 400px;
+  flex: 1 1 auto;  
 }
 
 
 #aa-search-input {
-  height: 30px;
+  height: 40px;
   /* margin-right: 60px; */
   padding-left: 1.5rem;
   /* padding-right: 2.25rem; */
@@ -92,10 +99,11 @@ p {
   background-color: #0e141f;
   outline: none;
   border-radius: 2em;
+  font-family: 'Wotfard', FontAwesome, sans-serif;
 }
 
 .aa-input-search::placeholder {
-  @apply italic;
+  /* @apply italic; */
 }
 
 .aa-input-search {
@@ -194,12 +202,10 @@ span.searchcontentcontainer {
 
 /* the top links that appear in the header */
 
-#linksContainer .siteLink {
-  color: #fff;
-}
-
 .siteLink {
+  @apply text-white whitespace-no-wrap font-bold;
   margin-right: 20px;
+  margin-top: 7px;
 }
 
 .siteLink:last-child {
@@ -233,13 +239,13 @@ span.searchcontentcontainer {
 
 #astronaut img {
   @apply sticky mt-6 opacity-25;
-  width: 340px;
+  min-width: 340px;
   filter: grayscale(100%);
   top: 164px;
 }
 
 #morelinks {
-  @apply sticky justify-center items-center;
+  @apply sticky justify-center items-center text-center;
   grid-column: 2 / 3;
   top: 286px;
 }
