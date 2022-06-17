@@ -247,7 +247,7 @@ span.searchcontentcontainer {
 #morelinks {
   @apply sticky justify-center items-center text-center;
   grid-column: 2 / 3;
-  top: 286px;
+  top: 317px;
 }
 
 #morelinks a {

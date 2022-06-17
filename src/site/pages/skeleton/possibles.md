@@ -4,6 +4,8 @@ layout: page
 permalink: worksforconsideration.html
 ---
 
+Below is a (very long, sorry) table of works that we are currently considering for the Archive. They might be recommendations we've gotten, works we've come across or things we've read but have yet to decide whether they fit in the Archive. This is a good starting point if you'd like to contribute to the site! Choose a work below that seems like your thing (or that you've read in the past) and submit an entry for it! Once you have, don't forget to also submit a pull request to remove the item from the table.
+
 | Author/Director | Title | Comments and/or web links |
 | --- | --- | --- |
 | Shale Aaron | Virtual Death | <a href="http://www.librarything.com/work/749026/book/26911595">www.librarything.com/work/749026/book/26911595</a>;<a href="http://thinkgalactic.org/reading-lists/by-author/">thinkgalactic.org/reading-lists/by-author</a> |
